@@ -1,0 +1,50 @@
+@prefix daq:	<http://purl.org/eis/vocab/daq#> .
+@prefix dqm:	<http://purl.org/eis/vocab/dqm#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfg:	<http://www.w3.org/2004/03/trix/rdfg-1> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qpro:	<http://purl.org/eis/vocab/qpro#> .
+@prefix prov:	<http://www.w3.org/ns/prov#> .
+@prefix umqm:	<http://um.edu.mt/metrics#> .
+@prefix ebiqm:	<http://www.diachron-fp7.eu/ebiqm#> .
+
+
+# UM Metrics (TO UPDATE METRICS IN CATEGORIES !!!)
+
+#Ontology Declaration
+umqm:hasOntologyDeclarationMetric
+
+	a			rdf:Property ;
+	rdfs:subPropertyOf	daq:hasMetric ;
+	rdfs:comment		"Links Conciseness Dimension with Ontology Declaration Metric" ;
+	rdfs:label		"Conciseness has Ontology Declaration metric" ;
+	rdfs:domain		dqm:Conciseness ;
+	rdfs:range		umqm:OntologyDeclarationMetric .	
+	
+umqm:OntologyDeclarationMetric
+
+	a			rdfs:Class ;
+	rdfs:subClassOf		daq:Metric ; 
+	daq:expectedDataType	xsd:double ;
+	rdfs:comment		"Checks whether the owl:Ontology is defined within the ontology" ;
+	rdfs:label		"Ontology Declaration metric" .
+
+#Cycles in Ontology
+umqm:hasCyclesInOntologyMetric
+
+	a			rdf:Property ;
+	rdfs:subPropertyOf	daq:hasMetric ;
+	rdfs:comment		"Links Conciseness Dimension with Cycles in Ontology Metric" ;
+	rdfs:label		"Conciseness has Cycles in Ontology metric" ;
+	rdfs:domain		dqm:Conciseness ;
+	rdfs:range		umqm:CyclesInOntologyMetric .	
+	
+umqm:CyclesInOntologyMetric
+
+	a			rdfs:Class ;
+	rdfs:subClassOf		daq:Metric ; 
+	daq:expectedDataType	xsd:double ;
+	rdfs:comment		"Checks whether the ontology has cycles" ;
+	rdfs:label		"Cycles in Ontology metric" .
