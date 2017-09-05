@@ -6,10 +6,9 @@ For a demonstration of this pipeline, please visit either of these two pages:
 1. For a demonstration using pre-configured, pre-loaded set of ontologies (the user is able to select which of those ontologies to assess), please visit http://ontoqav.publicvm.com/evaluation/preconf
 
 2. For an open demonstration whereby the user can upload an ontology file or point to its URI, please visit http://ontoqav.publicvm.com/evaluation/openconf
-
-
-
-
+ 
+ 
+ 
 This project creates a pipeline between:
 
 Luzzu -> a quality assessment framework for Linked Data and ontologies, and
